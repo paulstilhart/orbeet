@@ -27,7 +27,8 @@ form-label
 form-button
 
 
-uppercase sur certains élements de typo?
+
+
 
 marges : 100px en bureau, 20px en mobile
 
@@ -37,6 +38,10 @@ en dessous de 576px
 les sections prennent padding: 50px 20px;
 
 title section 2 : titre h2 : font 36px line-height : 48px : erreur?
+
+box-shadow sur les cartes : que veux tu exactement? (comportement déjà mis en place)
+
+comportement sur les cartes à regarder
 
 */
 
@@ -110,22 +115,30 @@ p {
     line-height: 28px;
 }
 
-.form_label{
+.p_small {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.p_tiny {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.form_label {
     font-weight: 700;
     font-size: 15px;
     line-height: 16px;
 }
 
-.form_button{
+.form_button {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
 }
 
-/* 
-p-small = font-size 15px et line-height 24px
-p-tiny = font-size 12px et line-height 16px
-*/
 
 /*==================== REM PIXELS VARIABLES ====================*/
 
@@ -142,6 +155,8 @@ paragraph : max-width : 460px
 marges : 100px en bureau, 20px en mobile
 */
 
+
+/* SECTIONS DEFINITIONS GENERALES */
 section {
     padding: 120px 100px;
     text-align: left;
@@ -161,13 +176,7 @@ section {
 }
 
 
-
-@media only screen and (max-width: 576px) {
-    section {
-        padding: 50px 20px;
-    }
-}
-
+/* SECTION HERO */
 .section_hero {
     background: #393131;
 }
@@ -177,6 +186,7 @@ section {
 }
 
 
+/* SECTION EMPLOYEES */
 .section_employees {
     background: #D9D9D9;
     color: #000000;
@@ -194,6 +204,7 @@ section {
     gap: 80px;
 }
 
+/* SECTION NUMBERS */
 .section_numbers {
     background: #F5F5F5;
     color: #000000;
@@ -229,41 +240,124 @@ section {
 }
 
 
+/* SECTION COMMUNITY */
+.section_community {
+    background: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.section_community .section_container {
+    max-width: 1140px;
+}
+
+.section_community h5 {
+    max-width: 630px;
+    margin: auto;
+}
+
+.section_community h2 {
+    max-width: 630px;
+    margin: 18px auto 43px auto;
+}
+
+.section_community p {
+    max-width: 650px;
+    margin: 0 auto 43px auto;
+}
+
+.section_community_cards_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.section_community_card {
+    display: inline-block;
+    background: #D9D9D9;
+    height: 400px;
+    width: calc(33.33% - 30px);
+    max-width: 350px;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.section_community_card:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0px 0px 0 5px #D9D9D9; */
+}
+
+.section_community_card span {
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    margin: 50px 0px 30px 30px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_community_card img {
+    max-height: 35px;
+}
+
+.section_community_card h3 {
+    color: #000000;
+    margin-left: 30px;
+}
+
+.section_community_card p {
+    color: #000000;
+    margin: 30px 50px 30px 30px;
+}
+
+
+
+
+/* SECTION NEWSLETTER */
 .section_newsletter {
     background: #FFFFFF;
     color: #000000;
     text-align: center;
 }
 
-.section_newsletter .section_container{
+.section_newsletter .section_container {
     max-width: 630px;
 }
 
-.section_newsletter h2{
+.section_newsletter h2 {
     margin: 18px 0 53px 0;
 }
 
-.section_newsletter_input{
+.section_newsletter_input {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:0;
+    gap: 0;
 }
 
-.section_newsletter_input button{
+.section_newsletter_input button {
     height: 46px;
     width: 100%;
     max-width: 154px;
     border: none;
-    background:#000000;
-    color:#FFFFFF;
+    background: #000000;
+    color: #FFFFFF;
     cursor: pointer;
     border-radius: 4px;
 }
-.section_newsletter_input input{
+
+.section_newsletter_input input {
     height: 44px;
-    width: calc(100% - 18px );
+    width: calc(100% - 18px);
     max-width: 282px;
     border: 1px solid #D3D4D8;
     border-radius: 4px;
@@ -272,8 +366,6 @@ section {
 
 
 /*==================== MEDIA QUERIES ====================*/
-
-
 @media only screen and (max-width: 576px) {
     section {
         padding: 50px 20px;
@@ -305,15 +397,35 @@ section {
         gap: 64px;
     }
 
-    .section_newsletter_input{
-        flex-direction: column;
-        gap:26px; 
+    .section_community {
+        text-align: left;
     }
 
-    .section_newsletter_input button{
+    .section_community h2 {
+        margin: 48px auto 29px auto;
+    }
+
+    .section_community_cards_container {
+        justify-content: start;
+    }
+
+
+    .section_newsletter_input {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .section_newsletter_input button {
         max-width: 360px;
     }
-    .section_newsletter_input input{
+
+    .section_newsletter_input input {
         max-width: 342px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .section_community_card {
+        width: 100% !important;
     }
 }
