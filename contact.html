@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbeet</title>
+    <!-- Feuille CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="section_contact">
+        <div class="section_container">
+            <p class="breadcrumb">Contact</p>
+            <h1 class="section_title">Contactez-nous</h1>
+            <p class="section_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                Suspendisse lectus tortor.
+            </p>
+        </div>
+    </section>
+    <div class="section_contact_form">
+        <div class="section_contact_form_input_container">
+            <div class="section_contact_form_input">
+                <div class="section_contact_form_input_card">
+                    <label class="form_label" for="name">Nom *</label>
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="20">
+                </div>
+                <div class="section_contact_form_input_card">
+                    <label class="form_label" for="firstname">Prénom *</label>
+                    <input type="text" id="firstname" name="firstname" required minlength="1" maxlength="20">
+                </div>
+                <div class="section_contact_form_input_card">
+                    <label class="form_label" for="email">Email *</label>
+                    <input type="email" id="email" name="email" required minlength="1">
+                </div>
+                <div class="section_contact_form_input_card">
+                    <label class="form_label" for="society">Société</label>
+                    <input type="text" id="society" name="society" required minlength="1" maxlength="20">
+                </div>
+                <div class="section_contact_form_input_card w_100">
+                    <label class="form_label" for="object">Objet *</label>
+                    <select type="select" id="object" name="object">
+                        <option value="">Sujet de votre demande</option>
+                        <option value="Infogérance">Infogérance</option>
+                        <option value="Intégration Odoo">Intégration Odoo</option>
+                        <option value="Développement d’API">Développement d’API</option>
+                        <option value="Demande sur mesure">Demande sur mesure</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="section_contact_form_input_card w_100">
+                    <label class="form_label" for="message">Message *</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+            </div>
+            <p class="p_tiny">* champs obligatoires</p>
+            <div><input type="checkbox" id="informations" name="informations">
+                <label class="p_tiny" for="informations">J'accepte de recevoir les lettres d’information
+                    d’Orbeet</label>
+            </div>
+            <div>
+                <input type="checkbox" id="confidentiality" name="confidentiality">
+                <label class="p_tiny" for="confidentiality">En cochant cette case, j’accepte la Politique de
+                    confidentialité
+                    de ce site</label>
+            </div>
+            <button class="form_button">Envoyer</button>
+        </div>
+        <div class="section_contact_form_infos_container">
+            <div class="section_contact_form_infos">
+                <h3>Orbeet</h3>
+                <p>59 rue Meslay
+                    <br>75003 Paris
+                    <br>
+                    <br>+33 1 83 62 72 88
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
