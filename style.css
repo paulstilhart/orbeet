@@ -9,47 +9,49 @@ Large	lg	≥992px
 Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px
 
-Police inter de google fonts?
-https://fonts.google.com/specimen/Inter?query=inter
 
-type de typos
-breadcrumb
-h1
-h2
-h2 strong
-h3
-h4
-h5
-p-large
-p-small
-p-tiny
-form-label
-form-button
-
-8 sections
+8 sections au total
 1 feuille contact
 1 footer
 
-5 sections faites
-hero
-employees
-numbers
-community
-newsletter
+7 sections faites
+1 hero
+2 employees
+3 numbers
+4 community
+5 newsletter
+6 offers
+7 functionalities
+footer
+
+a faire
+8 tool
+feuille contact
+
+
+Police inter de google fonts?
+https://fonts.google.com/specimen/Inter?query=inter
 
 
 marges : 100px en bureau, 20px en mobile
 
-couleur exacte background
+couleur exacte background hero section
 
 en dessous de 576px
 les sections prennent padding: 50px 20px;
 
-title section 2 : titre h2 : font 36px line-height : 48px : erreur?
+titre h2 2 employees et section 7 functionalities
+titre h2 avec une font differente sur le figma: erreur?
+titre h2 avec une font differente sur le figma font 36px line-height 48px: erreur?
 
 box-shadow sur les cartes : que veux tu exactement? (comportement déjà mis en place)
 
 comportement sur les cartes à regarder
+section 4 community
+section 6 offers
+section 7 functionalities
+
+
 
 */
 
@@ -64,6 +66,9 @@ comportement sur les cartes à regarder
     box-sizing: content-box;
 }
 
+a {
+    text-decoration: none;
+}
 
 
 /*==================== FONT-FAMILY ====================*/
@@ -154,17 +159,14 @@ p {
 /*==================== CLASSES UTILITAIRES ====================*/
 
 
+/*==================== SECTIONS DEFINITIONS GENERALES ====================*/
 
-/*==================== SECTION ====================*/
 /* 
 main-conteneur : 1000px centré
 title : max-width : 430px
 paragraph : max-width : 460px
 marges : 100px en bureau, 20px en mobile
 */
-
-
-/* SECTIONS DEFINITIONS GENERALES */
 section {
     padding: 120px 100px;
     text-align: left;
@@ -183,18 +185,16 @@ section {
     max-width: 460px;
 }
 
-
-/* SECTION HERO */
+/*==================== SECTION 1 HERO ====================*/
 .section_hero {
-    background: #131313;
+    background: #131313bb;
 }
 
 .section_hero h1 {
     margin: 65px 0 53px 0px;
 }
 
-
-/* SECTION EMPLOYEES */
+/*==================== SECTION 2 EMPLOYEES ====================*/
 .section_employees {
     background: #D9D9D9;
     color: #000000;
@@ -212,7 +212,7 @@ section {
     gap: 80px;
 }
 
-/* SECTION NUMBERS */
+/*==================== SECTION 3 NUMBERS ====================*/
 .section_numbers {
     background: #F5F5F5;
     color: #000000;
@@ -247,8 +247,7 @@ section {
     margin: 0 auto 18px auto;
 }
 
-
-/* SECTION COMMUNITY */
+/*==================== SECTION 4 COMMUNITY ====================*/
 .section_community {
     background: #000000;
     color: #FFFFFF;
@@ -291,7 +290,6 @@ section {
     max-width: 350px;
     cursor: pointer;
     text-align: left;
-    text-decoration: none;
     transition: all 0.2s ease;
 }
 
@@ -328,8 +326,7 @@ section {
 
 
 
-
-/* SECTION NEWSLETTER */
+/*==================== SECTION 5 NEWSLETTER ====================*/
 .section_newsletter {
     background: #FFFFFF;
     color: #000000;
@@ -372,7 +369,8 @@ section {
     padding-left: 16px;
 }
 
-/* SECTION OFFERS */
+
+/*==================== SECTION 6 OFFERS ====================*/
 .section_offers {
     padding: 120px 30px;
     background: #000000;
@@ -423,7 +421,7 @@ section {
 
 .custom,
 .custom a {
-    background: #131313;
+    background: #131313bb;
     color: #FFFFFF;
 }
 
@@ -434,7 +432,6 @@ section {
 .section_offers_card a {
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
@@ -443,6 +440,145 @@ section {
 .section_offers_card a img {
     width: 15px;
 }
+
+/*==================== SECTION 7 FUNCTIONALITIES ====================*/
+.section_functionalities {
+    background: #D9D9D9;
+    color: #000000;
+    text-align: center;
+}
+
+.section_functionalities h2 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0px auto 39px auto;
+    max-width: 630px;
+}
+
+.section_functionalities p {
+    margin: 0px auto 80px auto;
+    max-width: 650px;
+}
+
+.section_functionalities_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+}
+
+.section_functionalities_img {
+    height: 316px;
+    width: 100%;
+    max-width: 480px;
+    background-color: #FFFFFF;
+}
+
+.section_functionalities_text {
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.section_functionalities_text_card {
+    width: calc(50% - 30px);
+    text-align: left;
+}
+
+.section_functionalities_text_card h3 {
+    margin-bottom: 14px;
+    width: 90%;
+}
+
+.section_functionalities_text_card p {
+    margin: 0;
+    width: 100%;
+}
+
+/*==================== FOOTER ====================*/
+.footer_contact {
+    background: #131313bb;
+    padding: 40px 73px 68px 73px;
+}
+
+.footer_contact_img {
+    width: 150px;
+    height: 150px;
+    background: #F5F5F5;
+}
+
+.footer_contact p {
+    margin: 24px 0px 37px 0px;
+    max-width: 300px;
+}
+
+.footer_contact button {
+    height: 46px;
+    width: 198px;
+    border: none;
+    background: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.footer_contact button img {
+    margin: 0 15px 0 21px;
+    width: 20px;
+}
+
+.contact_white {
+    display: inline-block;
+}
+
+.contact_dark {
+    display: none;
+}
+
+.footer_links {
+    background: #131313;
+    height: 100px;
+    border-top: 1px solid #454545;
+    padding: 0px 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_links_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_links_container a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.footer_links_separator {
+    display: inline-block;
+    width: 1.5px;
+    height: 18px;
+    margin: 0 10px;
+    background: white;
+}
+
+.footer_links_social {
+    height: 101px;
+    border-top: 1px solid #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
@@ -456,6 +592,34 @@ section {
         font-size: 15px;
         line-height: 24px;
     }
+
+    .section_functionalities {
+        text-align: left;
+    }
+
+    .section_functionalities_text_card {
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer_contact {
+        background: #000000;
+        padding: 68px 20px 81px 20px;
+    }
+
+    .footer_contact button {
+        background: #FFFFFF;
+        color: #000000;
+    }
+
+    .contact_white {
+        display: none;
+    }
+
+    .contact_dark {
+        display: inline-block;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -509,12 +673,38 @@ section {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .footer_links {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+    }
+
+    .footer_links_container {
+        flex-direction: column;
+        gap:20px;
+        padding:50px 0;
+    }
+
+    .footer_links_separator {
+        display: none;
+    }
+
+    .footer_links_social {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .section_community_card {
         width: 100% !important;
     }
 
     .section_offers .section_container {
+        flex-wrap: wrap;
+    }
+
+    .section_functionalities_container {
         flex-wrap: wrap;
     }
 }
