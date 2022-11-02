@@ -1,7 +1,6 @@
 /* 
 https://www.figma.com/file/O5POqSkLrE5D1CtcWxyDNq/orbeet-delivery?node-id=0%3A1
 
-Breakpoints standards
 X-Small	None	<576px
 Small	sm	≥576px
 Medium	md	≥768px
@@ -10,29 +9,18 @@ Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px
 
 
+50px entre les titres paragraphe
 
-Police inter de google fonts?
-https://fonts.google.com/specimen/Inter?query=inter
+classes couleurs et background
 
+cartes avec effets shadow 
 
-marges : 100px en bureau, 20px en mobile
+classes utilitaires dans le html pour les marges aussi
 
-en dessous de 576px
-les sections prennent padding: 50px 20px;
+fonctionnalités entre paragraphes et image
 
-couleur exacte background hero section
+balise image en fond la ou il faut
 
-
-titre h2 2 employees et section 7 functionalities
-titre h2 avec une font differente sur le figma: erreur?
-titre h2 avec une font differente sur le figma font 36px line-height 48px: erreur?
-
-box-shadow sur les cartes : que veux tu exactement? (comportement déjà mis en place)
-
-comportement sur les cartes à regarder
-section 4 community
-section 6 offers
-section 7 functionalities
 
 
 
@@ -68,6 +56,11 @@ feuille contact
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 
@@ -77,6 +70,7 @@ html {
     font-size: 16px;
     font-style: normal;
     color: #000000;
+    background: #FFFFFF;
 }
 
 .breadcrumb {
@@ -97,7 +91,13 @@ h2 {
     line-height: 58px;
 }
 
-.h2_class {
+.h2_36_48 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.h2_42_54 {
     font-weight: 800;
     font-size: 42px;
     line-height: 54px;
@@ -152,15 +152,229 @@ p {
     line-height: 19px;
 }
 
+.weight_600{
+    font-weight: 600;
+}
+
 
 /*==================== REM PIXELS VARIABLES ====================*/
 
-
 /*==================== CLASSES UTILITAIRES ====================*/
+.color_black {
+    color: #000000;
+}
+
+.color_white {
+    color: #FFFFFF;
+}
+
+.background_black {
+    background: black;
+}
+
+.background_white {
+    background: #FFFFFF;
+}
+
+.background_grey_strong {
+    background: #131313bb;
+}
+
+.background_grey_soft {
+    background: #D9D9D9;
+}
+
+.background_white_break {
+    background: #F5F5F5;
+}
+
+.background_offers_grey {
+    background: #F4F4F4;
+}
+
+.background_offers_black {
+    background: #131313bb;
+}
+
+.border_grey {
+    border: 1px solid #D3D4D8;
+}
+
+.border_radius_4 {
+    border-radius: 4px;
+}
+
+.mw_800_auto {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mw_1000_auto {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mw_1140_auto {
+    max-width: 1140px;
+    margin: auto;
+}
+
+
+
+.my_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.mw_280{
+    max-width: 280px;
+}
+.mw_320 {
+    max-width: 320px;
+}
+
+.mw_340 {
+    max-width: 340px;
+}
+
+.mw_400{
+    max-width: 400px;
+}
+
+.mw_420 {
+    max-width: 420px;
+}
+
+.mw_430 {
+    max-width: 430px;
+}
+
+.mw_440 {
+    max-width: 440px;
+}
+
+.mw_460 {
+    max-width: 460px;
+}
+
+.mw_480 {
+    max-width: 480px;
+}
+
+.mw_520 {
+    max-width: 520px;
+}
+
+.mw_600 {
+    max-width: 600px;
+}
+
+.mw_630 {
+    max-width: 630px;
+}
+
+.mw_650 {
+    max-width: 650px;
+}
+
+.w_100{
+    width: 100%;
+}
+.h_50{
+    height: 50%;
+}
+.m_auto {
+    margin: auto;
+}
+
+.mt_18 {
+    margin-top: 18px;
+}
+
+.mt_30 {
+    margin-top: 30px;
+}
+
+.mt_60 {
+    margin-top: 60px;
+}
+
+.mb_20 {
+    margin-bottom: 20px;
+}
+
+.mb_50 {
+    margin-bottom: 50px;
+}
+
+.mb_110 {
+    margin-bottom: 110px;
+}
+
+.gap_30 {
+    gap: 30px;
+}
+
+.gap_45 {
+    gap: 45px;
+}
+
+.gap_60 {
+    gap: 60px;
+}
+
+.gap_80 {
+    gap: 80px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_column_between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex_start_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.flex_center_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.flex_nowrap {
+    flex-wrap: nowrap;
+}
 
 
 /*==================== SECTIONS DEFINITIONS GENERALES ====================*/
-
 /* 
 main-conteneur : 1000px centré
 title : max-width : 430px
@@ -172,143 +386,47 @@ section {
     text-align: left;
 }
 
-.section_container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.section_title {
-    max-width: 430px;
-}
-
-.section_paragraph {
-    max-width: 460px;
-}
-
 /*==================== SECTION 1 HERO ====================*/
-.section_hero {
-    background: #131313bb;
-    color:#FFFFFF;
-}
-
-.section_hero h1 {
-    margin: 65px 0 53px 0px;
-}
-
 /*==================== SECTION 2 EMPLOYEES ====================*/
-.section_employees {
-    background: #D9D9D9;
-    color: #000000;
-}
-
-.section_employees h2 {
-    font-size: 36px;
-    line-height: 48px;
-    margin-bottom: 63px;
-}
-
-.section_employees_row {
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
-}
-
 /*==================== SECTION 3 NUMBERS ====================*/
-.section_numbers {
-    background: #F5F5F5;
-    color: #000000;
-    text-align: center;
-}
-
-.section_numbers .section_container {
-    max-width: 1140px;
-}
-
-.section_numbers h5 {
-    max-width: 520px;
-    margin: auto;
-}
-
-.section_numbers h2 {
-    max-width: 600px;
-    margin: 27px auto 110px auto;
-}
-
-.section_numbers_cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
+.section_numbers_card {
+    width: calc(33.33% - 20px);
 }
 
 .section_numbers_card_number {
     font-weight: 800;
     font-size: 60px;
     line-height: 73px;
-    margin: 0 auto 18px auto;
+    margin-bottom: 18px;
 }
 
 /*==================== SECTION 4 COMMUNITY ====================*/
-.section_community {
-    background: #000000;
-    color: #FFFFFF;
-    text-align: center;
+.section_community_h2 {
+    margin-top: 18px;
+    margin-bottom: 50px;
 }
 
-.section_community .section_container {
-    max-width: 1140px;
-}
 
-.section_community h5 {
-    max-width: 630px;
-    margin: auto;
-}
-
-.section_community h2 {
-    max-width: 630px;
-    margin: 18px auto 43px auto;
-}
-
-.section_community p {
-    max-width: 650px;
-    margin: 0 auto 43px auto;
-}
-
-.section_community_cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 45px;
-    flex-wrap: wrap;
-}
 
 .section_community_card {
-    display: inline-block;
-    background: #D9D9D9;
     height: 400px;
     width: calc(33.33% - 30px);
     max-width: 350px;
-    cursor: pointer;
     text-align: left;
+}
+.section_community_card_hover{
     transition: all 0.2s ease;
 }
-
-.section_community_card:hover {
+.section_community_card_hover:hover {
     transform: scale(1.05);
     /* box-shadow: 0px 0px 0 5px #D9D9D9; */
 }
 
 .section_community_card span {
-    display: inline-block;
     width: 84px;
     height: 84px;
     margin: 50px 0px 30px 30px;
-    background: #FFFFFF;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .section_community_card img {
@@ -316,37 +434,17 @@ section {
 }
 
 .section_community_card h3 {
-    color: #000000;
     margin-left: 30px;
 }
 
 .section_community_card p {
-    color: #000000;
     margin: 30px 50px 30px 30px;
 }
 
 
-
 /*==================== SECTION 5 NEWSLETTER ====================*/
-.section_newsletter {
-    background: #FFFFFF;
-    color: #000000;
-    text-align: center;
-}
-
-.section_newsletter .section_container {
-    max-width: 630px;
-}
-
-.section_newsletter h2 {
-    margin: 18px 0 53px 0;
-}
 
 .section_newsletter_input {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 0;
 }
 
@@ -355,18 +453,12 @@ section {
     width: 100%;
     max-width: 154px;
     border: none;
-    background: #000000;
-    color: #FFFFFF;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
 .section_newsletter_input input {
     height: 44px;
     width: calc(100% - 18px);
     max-width: 282px;
-    border: 1px solid #D3D4D8;
-    border-radius: 4px;
     padding-left: 16px;
 }
 
@@ -374,57 +466,12 @@ section {
 /*==================== SECTION 6 OFFERS ====================*/
 .section_offers {
     padding: 120px 30px;
-    background: #000000;
-    color:#FFFFFF;
-}
-
-.section_offers .section_container {
-    max-width: 1140px;
-    margin: auto;
-    display: flex;
-    gap: 45px;
-    justify-content: space-between;
-    align-items: start;
-    flex-wrap: nowrap;
-}
-
-.section_offers_text h2 {
-    margin-bottom: 20px;
-    max-width: 420px;
-}
-
-.section_offers_text p {
-    max-width: 440px;
-}
-
-.section_offers_cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 45px;
-    flex-wrap: nowrap;
 }
 
 .section_offers_card {
     width: 220px;
     height: 229px;
     padding: 36px 52px 35px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.mint,
-.mint a {
-    background: #F4F4F4;
-    color: #000000;
-}
-
-.custom,
-.custom a {
-    background: #131313bb;
-    color: #FFFFFF;
 }
 
 .section_offers_card h3 {
@@ -432,11 +479,7 @@ section {
 }
 
 .section_offers_card a {
-    display: flex;
-    align-items: center;
     font-weight: 600;
-    font-size: 15px;
-    line-height: 24px;
 }
 
 .section_offers_card a img {
@@ -444,15 +487,8 @@ section {
 }
 
 /*==================== SECTION 7 FUNCTIONALITIES ====================*/
-.section_functionalities {
-    background: #D9D9D9;
-    color: #000000;
-    text-align: center;
-}
 
 .section_functionalities h2 {
-    font-size: 36px;
-    line-height: 48px;
     margin: 0px auto 39px auto;
     max-width: 630px;
 }
@@ -463,31 +499,23 @@ section {
 }
 
 .section_functionalities_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 60px;
-    flex-wrap: nowrap;
 }
 
 .section_functionalities_img {
     height: 316px;
     width: 100%;
     max-width: 480px;
-    background-color: #FFFFFF;
 }
 
 .section_functionalities_text {
     max-width: 460px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     gap: 60px;
 }
 
 .section_functionalities_text_card {
     width: calc(50% - 30px);
-    text-align: left;
 }
 
 .section_functionalities_text_card h3 {
@@ -501,46 +529,8 @@ section {
 }
 
 /*==================== SECTION 8 TOOL ====================*/
-.section_tool1,
-.section_tool2 {
-    background: #FFFFFF;
-    color: #000000;
-    text-align: left;
-}
-
-.section_tool1 .section_container {
-    display: flex;
-    gap: 40px;
-}
-
-.section_tool1 h3 {
-    max-width: 430px;
-}
-
-.section_tool1 p {
-    max-width: 460px;
-    margin: 26px 0 40px 0;
-}
-
-.section_tool1_text {
-    width: 100%;
-    max-width: 480px;
-}
-
-.section_tool1_text a {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 24px;
-    color: #000000;
-}
-
-.section_tool1_img {
-    background: #F5F5F5;
+.section_tool_img{
     height: 317px;
-    width: 100%;
-    max-width: 480px;
 }
 
 .section_tool2 .section_container {
@@ -552,8 +542,6 @@ section {
 .section_tool2 h2 {
     max-width: 320px;
     margin-bottom: 60px;
-    font-size: 36px;
-    line-height: 48px;
 }
 
 .section_tool2 p {
@@ -570,7 +558,7 @@ section {
 /*==================== FOOTER ====================*/
 .footer_contact {
     background: #131313bb;
-    color:#FFFFFF;
+    color: #FFFFFF;
     padding: 40px 73px 68px 73px;
 }
 
@@ -591,10 +579,6 @@ section {
     border: none;
     background: #000000;
     color: #FFFFFF;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
 }
 
 .footer_contact a img {
@@ -620,11 +604,6 @@ section {
     align-items: center;
 }
 
-.footer_links_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .footer_links_container a {
     font-weight: 400;
@@ -644,16 +623,13 @@ section {
 .footer_links_social {
     height: 101px;
     border-top: 1px solid #454545;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
-/*==================== SECTION CONTACT ====================*/
+/*==================== CONTACT ====================*/
 .section_contact {
     background: #131313bb;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 
 .section_contact h1 {
@@ -697,17 +673,17 @@ section {
     border-radius: 4px;
     height: 24px;
     background: #FFFFFF;
-    padding:10px;
+    padding: 10px;
 }
 
-.section_contact_form_input_card textarea{
+.section_contact_form_input_card textarea {
     border: 1px solid #D3D4D8;
     border-radius: 4px;
     height: 180px;
-    padding:10px;
+    padding: 10px;
 }
 
-.section_contact_form_input_container p{
+.section_contact_form_input_container p {
     margin: 27px 0px 45px 0px;
 }
 
@@ -717,9 +693,8 @@ section {
     border: none;
     background: #000000;
     color: #FFFFFF;
-    cursor: pointer;
     border-radius: 4px;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .section_contact_form_infos_container {
@@ -737,29 +712,27 @@ section {
     margin-bottom: 40px;
 }
 
-
-
-
-
-
 /*==================== MEDIA QUERIES ====================*/
 @media only screen and (max-width: 576px) {
     section {
         padding: 50px 20px;
     }
 
-    .section_employees_row p {
+    .p_small_under_576 {
         font-size: 15px;
         line-height: 24px;
     }
 
-    .section_functionalities {
+    .text_left_under_576 {
         text-align: left;
+    }
+
+    .section_functionalities_container {
+        justify-content: start;
     }
 
     .section_functionalities_text_card {
         width: 100%;
-        text-align: left;
     }
 
     .footer_contact {
@@ -804,40 +777,46 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-    .section_employees_row {
-        display: flex;
+    .flex_column_under_768 {
         flex-direction: column;
+    }
+
+    .flex_column_reverse_under_768 {
+        flex-direction: column-reverse;
+    }
+
+    .gap_10_under_768 {
         gap: 10px;
     }
 
-    .section_numbers {
+    .gap_60_under_768 {
+        gap: 60px;
+    }
+
+    .text_left_under_768 {
         text-align: left;
     }
 
-    .section_numbers h2 {
-        margin: 27px auto 68px auto;
+    .mb_70_under_768 {
+        margin-bottom: 70px;
     }
 
-    .section_numbers_cards_container {
-        flex-direction: column;
-        gap: 64px;
+    .section_numbers_card {
+        width: calc(100%);
     }
 
-    .section_community {
-        text-align: left;
-    }
-
-    .section_community h2 {
-        margin: 48px auto 29px auto;
+    .section_community_h2 {
+        margin-top: 48px;
+        margin-bottom: 29px;
     }
 
     .section_community_cards_container {
         justify-content: start;
+        gap: 31px;
     }
 
 
     .section_newsletter_input {
-        flex-direction: column;
         gap: 26px;
     }
 
@@ -849,9 +828,6 @@ section {
         max-width: 342px;
     }
 
-    .section_offers_cards_container {
-        flex-direction: column;
-    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -883,15 +859,11 @@ section {
 }
 
 @media only screen and (max-width: 1200px) {
+    .flex_wrap_under_1200 {
+        flex-wrap: wrap;
+    }
+
     .section_community_card {
         width: 100% !important;
-    }
-
-    .section_offers .section_container {
-        flex-wrap: wrap;
-    }
-
-    .section_functionalities_container {
-        flex-wrap: wrap;
     }
 }
