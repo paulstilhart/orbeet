@@ -152,7 +152,7 @@ p {
     line-height: 19px;
 }
 
-.weight_600{
+.weight_600 {
     font-weight: 600;
 }
 
@@ -225,9 +225,11 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
-.mw_280{
+
+.mw_280 {
     max-width: 280px;
 }
+
 .mw_320 {
     max-width: 320px;
 }
@@ -236,7 +238,7 @@ p {
     max-width: 340px;
 }
 
-.mw_400{
+.mw_400 {
     max-width: 400px;
 }
 
@@ -276,12 +278,14 @@ p {
     max-width: 650px;
 }
 
-.w_100{
+.w_100 {
     width: 100%;
 }
-.h_50{
+
+.h_50 {
     height: 50%;
 }
+
 .m_auto {
     margin: auto;
 }
@@ -387,6 +391,19 @@ section {
 }
 
 /*==================== SECTION 1 HERO ====================*/
+.section_hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.section_hero_background_image{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 10%;
+    width: 100%;
+}
+
 /*==================== SECTION 2 EMPLOYEES ====================*/
 /*==================== SECTION 3 NUMBERS ====================*/
 .section_numbers_card {
@@ -414,9 +431,11 @@ section {
     max-width: 350px;
     text-align: left;
 }
-.section_community_card_hover{
+
+.section_community_card_hover {
     transition: all 0.2s ease;
 }
+
 .section_community_card_hover:hover {
     transform: scale(1.05);
     /* box-shadow: 0px 0px 0 5px #D9D9D9; */
@@ -529,7 +548,7 @@ section {
 }
 
 /*==================== SECTION 8 TOOL ====================*/
-.section_tool_img{
+.section_tool_img {
     height: 317px;
 }
 
@@ -675,6 +694,7 @@ section {
     background: #FFFFFF;
     padding: 10px;
 }
+
 
 .section_contact_form_input_card textarea {
     border: 1px solid #D3D4D8;
